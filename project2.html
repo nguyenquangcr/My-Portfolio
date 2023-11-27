@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call me 𝓑𝓲𝓷𝓱</title>
+    <link rel="stylesheet" type="text/css" href="./FontAwesome/fontawesome-free-5.15.1-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="./image/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/project2.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header__logo"><a href="./index.html">Nguyen Ngoc Thanh <strong>Binh</strong></a></div>
+        <div class="backtoWorkBtn">
+            <a href="./works.html">Back <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <!-- MAIN -->
+    <section class="top">
+        <div class="container-project">
+            <div class="caption__main">
+                <p class="text-projectTitle">Iron Fitness</p>
+            </div>
+            <div class="caption__text">
+                <p class="text-project">Showcase</p>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container-iner">
+            <div class="content__video">
+                <video width="100%" controls autoplay>
+                    <source src="/videos/IronFitness.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="content__text">
+                <div class="alltext">
+                    <div class="textItem">
+                        <span>Front-End</span>
+                        <p>Binh Nguyen</p>
+                    </div>
+                    <div class="textItem">
+                        <span>Back-End</span>
+                        <p>none</p>
+                    </div>
+                    <div class="textItem">
+                        <span>Year</span>
+                        <p>2020</p>
+                    </div>
+                </div>
+                <div class="visitBtn">
+                    <a href="https://ironfitness.vercel.app/">Visit Website ❯</a>
+                </div>
+            </div>
+            <div class="content__img">
+                <div class="content__img-row">
+                    <img class="desktop--img" data-tilt data-tilt-glare data-tilt-max-glare="0.8"
+                        src="./image/WorksIronFitness/IronFitness Desktop1.png">
+                    <img class="desktop--img" data-tilt data-tilt-glare data-tilt-max-glare="0.8"
+                        src="./image/WorksIronFitness/IronFitness Desktop2.png">
+                </div>
+                <div class="background--img"></div>
+            </div>
+        </div>
+        <div class="nextproject">
+            <div class="nextproject-caption">
+                <p>Next Project</p>
+                <h2>
+                    <a href="./project3.html">Kyyeudreamers</a>
+                </h2>
+            </div>
+        </div>
+    </section>
+    <!-- CURSORS -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <!-- JS -->
+    <script src="./main.js"></script>
+    <script src="./allproject.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".desktop--img"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
+</body>
+
+</html>

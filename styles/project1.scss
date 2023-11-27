@@ -1,0 +1,207 @@
+$mainColor: #b23d43;
+$white: #fff;
+$black: #333;
+.header {
+	background-color: rgb(194, 153, 88);
+	.backtoWorkBtn {
+		align-self: center;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $black;
+			font-weight: 600;
+			i {
+				margin-left: 0.2rem;
+				animation: goRight 0.9s infinite;
+			}
+		}
+	}
+}
+.top {
+	background-color: rgb(194, 153, 88);
+	height: 660px;
+	.container-project {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-top: 4rem;
+		height: 100%;
+		text-align: center;
+		color: $white;
+		.caption__text {
+			text-transform: uppercase;
+			letter-spacing: 1rem;
+			font-size: 1.5rem;
+			text-align: center;
+			cursor: none;
+			.text-project {
+				span {
+					display: inline-block;
+					opacity: 0;
+					transform: translateY(50px) translateZ(0);
+					transition: all 0.5s ease;
+				}
+				span.fade {
+					opacity: 1;
+					transform: translateY(0) translateZ(0);
+				}
+				span:hover {
+					transform: scale(2) translateZ(0);
+				}
+			}
+		}
+		.caption__main {
+			font-size: 4rem;
+			font-weight: 600;
+			text-align: center;
+			margin-bottom: 0.5rem;
+			.text-projectTitle {
+				span {
+					opacity: 0;
+					transition: all 0.4s ease;
+				}
+				span.Fade {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+.content {
+	position: absolute;
+	top: 20rem;
+	.container-iner {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		.content__video {
+			width: 70%;
+			margin: 0 auto;
+			video:focus {
+				outline: none;
+			}
+		}
+		.content__text {
+			width: 70%;
+			margin: 0 auto;
+			margin-bottom: 3rem;
+			display: flex;
+			justify-content: space-between;
+			.alltext {
+				display: flex;
+				justify-content: flex-start;
+				gap: 5rem;
+				.textItem span {
+					font-family: g;
+					line-height: 2rem;
+					color: #717171;
+					text-transform: none;
+					letter-spacing: 0.5px;
+				}
+				.textItem p {
+					text-transform: uppercase;
+					font-weight: 650;
+				}
+			}
+			.visitBtn {
+				align-self: center;
+				margin-right: 2rem;
+				a {
+					font-weight: 650;
+					text-decoration: none;
+					color: $black;
+				}
+			}
+			.visitBtn:hover {
+				margin-right: 0rem;
+			}
+		}
+		.content__img {
+			width: 100%;
+			margin-bottom: 5rem;
+			position: relative;
+			.content__img-row {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 3rem;
+				img {
+					width: 35%;
+					z-index: 10;
+					display: block;
+					box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+						15px 15px 15px rgba(0, 0, 0, 0.1);
+				}
+			}
+			.background--img {
+				width: 80%;
+				height: 60%;
+				position: absolute;
+				z-index: 0;
+				background-color: rgb(194, 153, 88);
+				top: 11rem;
+				left: 50%;
+				transform: translateX(-50%) translateZ(0);
+			}
+		}
+	}
+	.nextproject {
+		height: 100vh;
+		background: rgb(194, 153, 88);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.nextproject-caption p {
+			font-size: 1.5rem;
+			font-family: fmain;
+			line-height: initial;
+			color: $white;
+			text-transform: uppercase;
+			letter-spacing: 10px;
+			margin: 0;
+			margin-bottom: 0px;
+			font-weight: normal;
+			text-align: center;
+		}
+		.nextproject-caption h2 {
+			text-align: center;
+		}
+		.nextproject-caption h2 a {
+			text-decoration: none;
+			font-size: 5rem;
+			font-family: g;
+			line-height: 100px;
+			color: $white;
+			text-transform: none;
+			letter-spacing: 1px;
+			font-weight: normal;
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: $white;
+			transition: 0.4s;
+			-webkit-transition: 0.4s;
+			-o-transition: 0.4s;
+			&:hover {
+				-webkit-text-fill-color: $white;
+				text-shadow: 3px 3px 5px $black;
+			}
+		}
+	}
+}
+@keyframes goRight {
+	0% {
+		transform: translateX(5px) translateZ(0);
+		opacity: 0.5;
+	}
+	50% {
+		transform: translateX(10px) translateZ(0);
+		opacity: 0.2;
+	}
+	100% {
+		transform: translateX(0) translateZ(0);
+	}
+}
+
+@import "./responsiveTablet";
+@import "./responsiveMobile";

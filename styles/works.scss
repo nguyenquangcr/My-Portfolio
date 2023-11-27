@@ -1,0 +1,65 @@
+$mainColor: #b23d43;
+$white: #fff;
+$black: #333;
+.footer {
+	display: flex;
+}
+.container-Works {
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+	margin: 2rem 0;
+	.slider-img {
+		width: 100%;
+		height: 400px;
+	}
+	.left--Works,
+	.right--Works {
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		text-align: center;
+		.Works---wrapper a {
+			text-decoration: none;
+			&:hover .line2 {
+				display: block;
+				width: 100%;
+			}
+			&:hover .mainTitle {
+				color: $mainColor;
+			}
+		}
+		.worksTitle .mainTitle {
+			color: $black;
+			font-weight: 650;
+			font-size: 1.35rem;
+			text-align: center;
+			margin-top: 24px;
+			position: relative;
+			.line2 {
+				position: absolute;
+				display: none;
+				top: 0;
+				left: 0;
+				width: 0%;
+				height: 100%;
+				background: $mainColor;
+				animation-duration: 1000ms;
+				animation-name: yellow-flash;
+				animation-fill-mode: forwards;
+				transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+			}
+		}
+		.descriptionTitle p {
+			display: block;
+			color: #888;
+			text-align: center;
+			margin-top: 16px;
+			line-height: 1.5em;
+		}
+	}
+}
+
+@import "./responsiveTablet";
+@import "./responsiveMobile";

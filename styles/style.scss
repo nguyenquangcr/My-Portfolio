@@ -1,0 +1,336 @@
+$mainColor: #b23d43;
+$white: #fff;
+$black: #333;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+	transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+body{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+body,
+html {
+	overflow-x: hidden;
+	background: $white;
+	color: $black;
+	font-weight: 400;
+	font-size: 17px;
+}
+
+body.darkmode {
+	background: $black;
+	color: $white;
+	.footer a,
+	.footer a i {
+		color: $white;
+		&:hover {
+			color: $mainColor;
+		}
+	}
+	.header .header__logo a,
+	.header nav .header__navLinks .header__navLinks---link .link {
+		color: $white;
+	}
+	.header nav .header__navLinks .header__navLinks---link .link:hover {
+		color: $mainColor;
+	}
+	.AllTitle .homepage-title--mainTitle {
+		color: $white;
+	}
+	.container
+		.container_homepage
+		.homepage-banner--slider
+		.homepage-title
+		.homepage-title--mainTitle {
+		color: $white;
+	}
+	.containerMobile .homepage-titleMobile .homepage-title--mainTitle {
+		color: $white;
+	}
+	.container .container_homepage .homepage-banner--slider .homepage-title a,
+	.containerMobile .homepage-titleMobile a {
+		color: $black;
+		&:hover {
+			color: $white;
+		}
+	}
+	.container-Contact .container-Contact--form form .lastForm .contact-submit {
+		color: $white;
+		&:hover {
+			color: $black;
+		}
+	}
+	.container-Contact
+		.container-Contact--wrapper
+		.contact-wrapper--social
+		.contact
+		.contacts,
+	.container-Contact
+		.container-Contact--wrapper
+		.contact-wrapper--social
+		.tel
+		.contacts,
+	.container-Contact
+		.container-Contact--wrapper
+		.contact-wrapper--social
+		.social
+		a
+		i {
+		color: $white;
+		&:hover {
+			color: $mainColor;
+		}
+	}
+	.container-About .container-About--wrapper .About---wrapperTitle p span,
+	.container-About .container-About--wrapper .About---wrapperSkill h3,
+	.container-About
+		.container-About--wrapper
+		.About---wrapperTitle
+		.container-About--content1
+		span,
+	.container-About
+		.container-About--wrapper
+		.About---wrapperTitle
+		.container-About--content1
+		p
+		strong,
+	.container-About .container-About--content2 p strong,
+	.container-About .container-About--content2 span {
+		color: $white;
+	}
+	.container-Works .left--Works .Works---wrapper a .mainTitle,
+	.container-Works .right--Works .Works---wrapper a .mainTitle {
+		color: $white;
+	}
+	.container-Works .Works---wrapper a:hover .mainTitle {
+		color: $mainColor;
+	}
+	.cursor {
+		border: 3px solid $white;
+	}
+	.changeMode {
+		background-color: $black;
+		i {
+			color: $mainColor;
+		}
+	}
+	.darkMode .changeMode2 {
+		i {
+			color: $mainColor;
+		}
+	}
+}
+.changeMode {
+	padding: 10px 10px;
+	background: $white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	i {
+		font-size: 1.3rem;
+	}
+}
+.darkMode .changeMode2 {
+	position: absolute;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	top: 2rem;
+	left: 1.5rem;
+	z-index: 99999;
+	i {
+		font-size: 2rem;
+	}
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+} 
+::-webkit-scrollbar-thumb {
+	background: $mainColor; 
+}
+
+/*Cursor*/
+.cursor {
+	position: fixed;
+	width: 30px;
+	height: 30px;
+	border: 3px solid $black;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	transition: 0s;
+	transform-origin: 100% 100%;
+	z-index: 99999;
+}
+.cursor2 {
+	position: fixed;
+	width: 5px;
+	height: 5px;
+	background: gray;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	transition: 0s;
+	z-index: 99999;
+}
+.link-grow_cursor {
+	transform: scale(2) translateZ(0);
+	background: $black;
+	opacity: 0.3;
+	transition: all 0.1s ease;
+}
+.link-grow_cursor2 {
+	opacity: 0;
+}
+/*MainTitle*/
+.homepage-title--mainTitle {
+	position: relative;
+	color: $black;
+	font-size: 2.6em;
+	z-index: 99;
+	opacity: 0;
+	animation-duration: 1000ms;
+	animation-name: fade-in-text;
+	animation-fill-mode: forwards;
+	transition: all 1500ms cubic-bezier(0.77, 0, 0.175, 1);
+	.line1 {
+		position: absolute;
+		bottom: 5px;
+		left: -20px;
+		background: #dddddd;
+		height: 8px;
+		width: 19%;
+		z-index: -1;
+		animation-duration: 500ms;
+		animation-delay: 800ms;
+		animation-name: grey-flash;
+		animation-fill-mode: forwards;
+		transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+	}
+	.mainTitle {
+		position: relative;
+		.line2 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $mainColor;
+			animation-duration: 1000ms;
+			animation-name: yellow-flash;
+			animation-fill-mode: forwards;
+			transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+		}
+	}
+}
+.homepage-title--contentTitle {
+	font-size: 2.5rem;
+	p {
+		width: 100%;
+		display: block;
+		position: relative;
+		overflow: hidden;
+		height: 1.3em;
+		line-height: 1.3em;
+		&:hover {
+			transform: scale(1.1) translateZ(0);
+		}
+	}
+}
+.AllTitle {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 50px;
+	font-weight: 700;
+}
+
+@keyframes grey-flash {
+	from {
+		width: 0;
+	}
+	to {
+		width: 80px;
+	}
+}
+@keyframes yellow-flash {
+	0% {
+		transform: scale3d(0, 1, 1) translateZ(0);
+		transform-origin: left center;
+	}
+	50% {
+		transform-origin: left center;
+	}
+	51% {
+		transform: scale3d(1, 1, 1) translateZ(0);
+		transform-origin: right center;
+	}
+	100% {
+		transform: scale3d(0, 1, 1) translateZ(0);
+		transform-origin: right center;
+	}
+}
+@keyframes fade-in-text {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		color: $mainColor;
+	}
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes slide-in-up {
+	from {
+		transform: translateY(30px) translateZ(0);
+	}
+	to {
+		transform: translateY(0) translateZ(0);
+	}
+}
+@keyframes slide-in-down {
+	from {
+		transform: translateY(-30px) translateZ(0);
+	}
+	to {
+		transform: translateY(0) translateZ(0);
+	}
+}
+
+@keyframes menu-fadeIn {
+	0% {
+		opacity: 0;
+		right: 4%;
+	}
+	100% {
+		opacity: 1;
+		right: 6%;
+	}
+}
+@import "./header";
+@import "./footer";
+@import "./navbarMobilePage";

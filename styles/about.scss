@@ -1,0 +1,224 @@
+$mainColor: #b23d43;
+$white: #fff;
+$black: #333;
+.footer {
+	display: flex;
+}
+.container-About {
+	color: #888;
+	font-weight: 600;
+	line-height: 1.7rem;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	.container-About--wrapper {
+		display: flex;
+		gap: 4.8rem;
+		.About---wrapperTitle {
+			width: 45%;
+			line-height: 1.7em;
+			.about-name {
+				font-size: 1.274rem;
+				margin-bottom: 1rem;
+				.hand-shake {
+					animation-name: waveHand-animation;  /* Refers to the name of your @keyframes element below */
+					animation-duration: 2.5s;        /* Change to speed up or slow down */
+					animation-iteration-count: infinite;  /* Never stop waving :) */
+					transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+					display: inline-block;
+				}
+				span {
+					color: $black;
+					font-weight: 700;
+				}
+				.changeColor {
+					color: $white;
+				}
+			}
+			.container-About--content1 {
+				width: 100%;
+				margin-top: 5rem;
+				.title {
+					color: $black;
+					font-size: 1.5rem;
+					font-weight: 700;
+				}
+				.position {
+					color: $black;
+					font-weight: 650;
+				}
+				.changeColor {
+					color: $white;
+				}
+				ul li {
+					margin-top: 1rem;
+					strong {
+						color: $black;
+					}
+				}
+			}
+		}
+		.About---wrapperSkill {
+			width: 55%;
+			.me-img {
+				width: 100%;
+				overflow: hidden;
+				.me {
+					display: block;
+					width: 90%;
+					margin-bottom: 3rem;
+					&:hover {
+						transform: scale(1.1) translateZ(0);
+					}
+				}
+			}
+			h3 {
+				color: $black;
+				font-size: 1.5rem;
+				padding-left: 2rem;
+			}
+			.changeColor {
+				color: $white;
+			}
+			.timelineStudy {
+				border-left: 4px solid $mainColor;
+				border-radius: 0.8rem;
+				margin: 1rem auto;
+				margin-bottom: 2rem;
+				position: relative;
+				padding: 1.5rem 2rem 0.5rem 2rem;
+				list-style: none;
+				text-align: left;
+				width: 100%;
+				ul {
+					.date {
+						.title {
+							font-weight: 650;
+						}
+						border-bottom: 1px solid #888888;
+						margin-bottom: 1rem;
+						padding-bottom: 1rem;
+						position: relative;
+						list-style: none;
+						&::after,
+						&::before {
+							position: absolute;
+							display: block;
+							top: 15%;
+							transform: translateY(-50%);
+						}
+						&::after {
+							content: "";
+							box-shadow: 0 0 0 4px $black;
+							border-radius: 100%;
+							left: -2.5rem;
+							height: 0.8rem;
+							width: 0.8rem;
+							background-color: $white;
+						}
+						&::before {
+							content: attr(date-date);
+							left: -15.5rem;
+							text-align: right;
+							min-width: 12rem;
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+			.skill::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.skill h3 {
+				margin-bottom: 1rem;
+				padding-left: 2rem;
+			}
+			.skill p {
+				display: block;
+				text-align: center;
+				font-weight: 650;
+				width: 40%;
+				padding: 10px 20px;
+				margin: 0.3rem 0 1rem 2rem;
+				float: left;
+				position: relative;
+				overflow: hidden;
+				&:hover {
+					color: $white;
+					background: $mainColor;
+					box-shadow: 0 0 50px $mainColor;
+					transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+					transition-delay: 0.1s;
+				}
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 20px;
+					height: 20px;
+					border-top: 2px solid $mainColor;
+					border-left: 2px solid $mainColor;
+					transition: 0.5s;
+				}
+				&:hover::before {
+					width: 100%;
+					height: 100%;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: 20px;
+					height: 20px;
+					border-bottom: 2px solid $mainColor;
+					border-right: 2px solid $mainColor;
+					transition: 0.5s;
+				}
+				&:hover::after {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	.container-About--content2 {
+		display: none;
+		width: 100%;
+		margin-top: 2rem;
+		.title {
+			color: $black;
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+		.position {
+			color: $black;
+			font-weight: 650;
+		}
+		.changeColor {
+			color: $white;
+		}
+		ul li {
+			margin-top: 1rem;
+			strong {
+				color: $black;
+			}
+		}
+	}
+}
+@keyframes waveHand-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+@import "./responsiveTablet";
+@import "./responsiveMobile";

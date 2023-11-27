@@ -1,0 +1,162 @@
+// 1280px
+@media screen and (max-width: 80em) {
+	.cursor,
+	.cursor2 {
+		display: none;
+	}
+	a {
+		user-select: none;
+		-webkit-user-select: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.changeMode,
+	.changeMode2 {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+// 1024px
+@media screen and (max-width: 64em) {
+	.header {
+		nav {
+			.header__navLinks {
+				gap: 2.5rem;
+				.header__navLinks---link {
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+	/*CONTACT PAGE*/
+	.AllTitle,
+	.container-Contact {
+		padding: 0 10%;
+	}
+	/*ABOUT PAGE*/
+	.container-About {
+		width: 100%;
+		.container-About--wrapper {
+			width: 100%;
+			gap: 1rem;
+			.About---wrapperTitle {
+				width: 50%;
+				padding: 0 4%;
+				.container-About--content1 {
+					margin-top: 7.2rem;
+				}
+			}
+		}
+	}
+	/*WORKS*/
+	.container-Works {
+		gap: 2rem;
+		.left--Works,
+		.right--Works {
+			width: 40%;
+		}
+	}
+	/*PROJECT1 & PROJECT2*/
+	.top {
+		height: 600px;
+	}
+	.content {
+		position: absolute;
+		top: 25rem;
+		.content__video {
+			width: 95% !important;
+		}
+		.content__text {
+			width: 95% !important;
+		}
+		.content__img {
+			.content__img-row {
+				img {
+					width: 40% !important;
+				}
+			}
+			.background--img {
+				width: 95% !important;
+				top: 8rem !important;
+			}
+		}
+	}
+}
+// 900px
+@media screen and (max-width: 56.25em) {
+	.header,
+	.footer {
+		padding: 0 3% 0 3%;
+	}
+	.header {
+		nav {
+			width: 60%;
+			.header__navLinks {
+				gap: 0rem;
+				justify-content: flex-start;
+				.header__navLinks---link {
+					margin-right: 3rem;
+					&:nth-child(4) {
+						margin-right: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+	/*CONTACT PAGE*/
+	.AllTitle {
+		width: 100%;
+		padding: 0 8%;
+	}
+	.container-Contact {
+		width: 100%;
+		padding: 0 8%;
+		padding-bottom: 2rem;
+		display: flex;
+		flex-direction: column;
+		.container-Contact--form {
+			width: 100%;
+		}
+	}
+	/*ABOUT PAGE*/
+	.container-About {
+		width: 100%;
+		.container-About--wrapper {
+			width: 100%;
+			flex-direction: column;
+			.About---wrapperTitle {
+				width: 100%;
+				font-size: 0.9rem;
+				padding: 0 7%;
+				.container-About--content1 {
+					display: none;
+				}
+			}
+			.About---wrapperSkill {
+				padding: 0 17%;
+				width: 100%;
+				margin-top: 2rem;
+				.me-img {
+					width: 100%;
+					.me {
+						width: 100%;
+					}
+				}
+				.timelineStudy {
+					font-size: 0.9rem;
+				}
+			}
+		}
+		.container-About--content2 {
+			display: block !important;
+			width: 100%;
+			padding: 0 21%;
+		}
+	}
+	/*WORKS*/
+	.container-Works {
+		gap: 2rem;
+		.left--Works,
+		.right--Works {
+			width: 45%;
+		}
+	}
+}
